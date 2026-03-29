@@ -1,0 +1,90 @@
+{
+  "dataset": {
+    "name": "VideoBadminton",
+    "total_clips": 7822,
+    "num_classes": 18,
+    "class_names": [
+      "00_Short Serve",
+      "01_Cross Court Flight",
+      "02_Lift",
+      "03_Tap Smash",
+      "04_Block",
+      "05_Drop Shot",
+      "06_Push Shot",
+      "07_Transitional Slice",
+      "08_Cut",
+      "09_Rush Shot",
+      "10_Defensive Clear",
+      "11_Defensive Drive",
+      "12_Clear",
+      "13_Long Serve",
+      "14_Smash",
+      "15_Flat Shot",
+      "16_Rear Court Flat Drive",
+      "17_Short Flat Shot"
+    ],
+    "failed_extractions": 1554,
+    "extraction_success_rate": 0.8013
+  },
+  "results": {
+    "best_model": "svm",
+    "random_forest": {
+      "top1_accuracy": 0.5716,
+      "mean_class_accuracy": 0.4311
+    },
+    "svm": {
+      "top1_accuracy": 0.5665,
+      "mean_class_accuracy": 0.4394
+    }
+  },
+  "analysis": {
+    "best_classified_strokes": [
+      {
+        "class": "00_Short Serve",
+        "recall": 0.875
+      },
+      {
+        "class": "13_Long Serve",
+        "recall": 0.8232
+      },
+      {
+        "class": "12_Clear",
+        "recall": 0.7725
+      }
+    ],
+    "worst_classified_strokes": [
+      {
+        "class": "15_Flat Shot",
+        "recall": 0.0462
+      },
+      {
+        "class": "10_Defensive Clear",
+        "recall": 0.0455
+      },
+      {
+        "class": "03_Tap Smash",
+        "recall": 0.0
+      }
+    ],
+    "pca_variance_explained_2pc": 0.5384
+  },
+  "privacy_argument": {
+    "skeleton_values_per_frame": 132,
+    "rgb_values_per_frame_1080p": 6220800,
+    "data_reduction_percent": 99.998
+  },
+  "benchmark_context": {
+    "st_gcn_mean_cls_acc": 61.44,
+    "posec3d_mean_cls_acc": 67.18,
+    "slowfast_mean_cls_acc": 73.8,
+    "note": "Our skeleton-only CPU pipeline vs GPU-trained deep models"
+  },
+  "plots_directory": "C:\\Users\\Anuj0\\Downloads\\Badminton_Output\\plots",
+  "files_generated": [
+    "confusion_matrix_rf.png",
+    "confusion_matrix_svm.png",
+    "pca_scatter.png",
+    "per_class_accuracy.png",
+    "benchmark_comparison.png"
+  ]
+}
